@@ -12,3 +12,8 @@ B1 = Kss.B;
 C1 = Kss.C;
 D1 = Kss.D;
 
+txa_r_up = 10000;
+txa_r_down = 15000;
+
+ty_r_up = 20000;
+ty_r_down = 25000;
