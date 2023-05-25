@@ -259,6 +259,60 @@ figure(f);
         ylim([-1, 1]);
 
 
+f = figure(106);
+f.Name = 'dir';
+
+idx = t >= tdir*0.99;
+tmp = t(idx);
+figure(f);
+    subplot(3,2, 1:2);
+    hold all;
+    plot(t(idx), Dy(2, 2)^-1*(y(idx) - y0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$y(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 3);hold all;
+    plot(t(idx), Dy(1, 1)^-1*(xa(idx)-xa0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$x_a(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 4);
+   hold all;
+    plot(t(idx), Dy(1, 1)^-1*(xb(idx)-xb0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$x_b(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 5);
+   hold all;
+    plot(t(idx), Du(1, 1)^-1*(Fa(idx) - Fa0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$F_a(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 6);
+   hold all;
+    plot(t(idx), Du(2, 2)^-1*(Fb(idx) - Fb0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$F_b(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+
+        fontsize(f, 8, "points");
+
+
 
 
 
@@ -288,7 +342,7 @@ disp("1/Tr_11: ");
 disp(1/Tr11);
 
 Nstart = find(t >= ty_r_up, 1);
-Nend = find(t>= txa_r_down, 1);
+Nend = find(t>= ty_r_down, 1);
 [~,Tr22] = findTsTr(y, t,Nstart, Nend);
 disp("1/Tr_22: ");
 disp(1/Tr22);
@@ -589,6 +643,60 @@ figure(f);
         fontsize(f, 8, "points");
 
 
+f = figure(106);
+f.Name = 'dir';
+
+idx = t >= tdir*0.99;
+tmp = t(idx);
+figure(f);
+    subplot(3,2, 1:2);
+    hold all;
+    plot(t(idx), Dy(2, 2)^-1*(y(idx) - y0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$y(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 3);hold all;
+    plot(t(idx), Dy(1, 1)^-1*(xa(idx)-xa0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$x_a(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 4);
+   hold all;
+    plot(t(idx), Dy(1, 1)^-1*(xb(idx)-xb0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$x_b(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 5);
+   hold all;
+    plot(t(idx), Du(1, 1)^-1*(Fa(idx) - Fa0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$F_a(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 6);
+   hold all;
+    plot(t(idx), Du(2, 2)^-1*(Fb(idx) - Fb0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$F_b(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+
+        fontsize(f, 8, "points");
+
+
 
 
 
@@ -619,7 +727,7 @@ disp("1/Tr_11: ");
 disp(1/Tr11);
 
 Nstart = find(t >= ty_r_up, 1);
-Nend = find(t>= txa_r_down, 1);
+Nend = find(t>= ty_r_down, 1);
 [~,Tr22] = findTsTr(y, t,Nstart, Nend);
 disp("1/Tr_22: ");
 disp(1/Tr22);
@@ -916,6 +1024,59 @@ figure(f);
 
         fontsize(f, 8, "points");
 
+f = figure(106);
+f.Name = 'dir';
+
+idx = t >= tdir*0.99;
+tmp = t(idx);
+figure(f);
+    subplot(3,2, 1:2);
+    hold all;
+    plot(t(idx), Dy(2, 2)^-1*(y(idx) - y0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$y(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 3);hold all;
+    plot(t(idx), Dy(1, 1)^-1*(xa(idx)-xa0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$x_a(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 4);
+   hold all;
+    plot(t(idx), Dy(1, 1)^-1*(xb(idx)-xb0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$x_b(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 5);
+   hold all;
+    plot(t(idx), Du(1, 1)^-1*(Fa(idx) - Fa0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$F_a(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 6);
+   hold all;
+    plot(t(idx), Du(2, 2)^-1*(Fb(idx) - Fb0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$F_b(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+
+        fontsize(f, 8, "points");
+
 
 
 
@@ -944,7 +1105,7 @@ disp("1/Tr_11: ");
 disp(1/Tr11);
 
 Nstart = find(t >= ty_r_up, 1);
-Nend = find(t>= txa_r_down, 1);
+Nend = find(t>= ty_r_down, 1);
 [~,Tr22] = findTsTr(y, t,Nstart, Nend);
 disp("1/Tr_22: ");
 disp(1/Tr22);
@@ -1242,6 +1403,59 @@ figure(f);
 
         fontsize(f, 8, "points");
 
+  f = figure(106);
+f.Name = 'dir';
+
+idx = t >= tdir*0.99;
+tmp = t(idx);
+figure(f);
+    subplot(3,2, 1:2);
+    hold all;
+    plot(t(idx), Dy(2, 2)^-1*(y(idx) - y0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$y(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 3);hold all;
+    plot(t(idx), Dy(1, 1)^-1*(xa(idx)-xa0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$x_a(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 4);
+   hold all;
+    plot(t(idx), Dy(1, 1)^-1*(xb(idx)-xb0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$x_b(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 5);
+   hold all;
+    plot(t(idx), Du(1, 1)^-1*(Fa(idx) - Fa0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$F_a(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+   subplot(3,2, 6);
+   hold all;
+    plot(t(idx), Du(2, 2)^-1*(Fb(idx) - Fb0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$F_b(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-1, 1]);
+
+        fontsize(f, 8, "points");
+
 
 
 
@@ -1270,7 +1484,7 @@ disp("1/Tr_11: ");
 disp(1/Tr11);
 
 Nstart = find(t >= ty_r_up, 1);
-Nend = find(t>= txa_r_down, 1);
+Nend = find(t>= ty_r_down, 1);
 [~,Tr22] = findTsTr(y, t,Nstart, Nend);
 disp("1/Tr_22: ");
 disp(1/Tr22);
@@ -1606,6 +1820,67 @@ end
 
 
 
+f = figure(106);
+f.Name = 'dir';
+
+idx = t >= tdir*0.99;
+tmp = t(idx);
+figure(f);
+    subplot(3,2, 1:2);
+    hold all;
+    plot(t(idx), Dy(2, 2)^-1*(y(idx) - y0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$y(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([0, .92]);
+   subplot(3,2, 3);hold all;
+    plot(t(idx), Dy(1, 1)^-1*(xa(idx)-xa0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$x_a(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([-0.04, 0.42]);
+   subplot(3,2, 4);
+   hold all;
+    plot(t(idx), Dy(1, 1)^-1*(xb(idx)-xb0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$x_b(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([0, 2.32]);
+   subplot(3,2, 5);
+   hold all;
+    plot(t(idx), Du(1, 1)^-1*(Fa(idx) - Fa0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$F_a(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([0, 3]);
+   subplot(3,2, 6);
+   hold all;
+    plot(t(idx), Du(2, 2)^-1*(Fb(idx) - Fb0));
+        grid on;
+        xlabel('$t$ [s]');
+        ylabel('$F_b(t)$ [a.u.]');
+        tmp = t(idx);
+        xlim([tmp(1) tmp(end)]);
+        ylim([0, 2.4]);
+
+        fontsize(f, 8, "points");
+subplot(3,2, 1:2);
+legend(names, 'Location', 'eastoutside');
+
+if(SAVE)
+    saveas(f,[path '\' f.Name '.eps'],'epsc');
+end 
+
+
+
 Nstart = 1;
 Nend = find(t>= txa_r_up, 1) - 1;
 [Ts_y,~] = findTsTr(y, t,Nstart, Nend);
@@ -1630,7 +1905,7 @@ disp("1/Tr_11: ");
 disp(1/Tr11);
 
 Nstart = find(t >= ty_r_up, 1);
-Nend = find(t>= txa_r_down, 1);
+Nend = find(t>= ty_r_down, 1);
 [~,Tr22] = findTsTr(y, t,Nstart, Nend);
 disp("1/Tr_22: ");
 disp(1/Tr22);

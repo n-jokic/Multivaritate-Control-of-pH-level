@@ -86,6 +86,8 @@ figure(f);
    y1 = D(1, :);
    y2 = D(2, :);
 
+   disp(y1);
+   disp(y2);
    gain1 = "Gain: " + num2str(20*log10(V(1, 1))) + " dB";
    gain2 = "Gain: " + num2str(20*log10(V(2, 2))) + " dB";
 
