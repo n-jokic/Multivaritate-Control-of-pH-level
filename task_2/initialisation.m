@@ -63,3 +63,6 @@ tFa_d_down = 75000; tFb_d_up = 85000; tFb_d_down = 95000;
 decentralized_simulation;
 %%
 decoupling_dc_simulation;
+%%
+decoupling_w0_simulation;
+
