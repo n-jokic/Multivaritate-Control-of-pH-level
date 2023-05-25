@@ -73,3 +73,5 @@ h_inf_simulation;
 inversion_simulation;
 %%
 simulation_data_processing;
+%%
+singular_characteristics;
