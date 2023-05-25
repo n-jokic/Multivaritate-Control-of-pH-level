@@ -1,0 +1,17 @@
+close all;
+clc;
+%%
+load('parameters.mat')
+load('scaling_factors.mat')
+load("decounping_controler.mat")
+load('set_point.mat')
+
+K_sel = 2;
+
+Kss = ss(K_decenent);
+A2 = Kss.A;
+B2 = Kss.B;
+C2 = Kss.C;
+D2 = Kss.D;
+
+save('decoupling_w0_data', "simdata");

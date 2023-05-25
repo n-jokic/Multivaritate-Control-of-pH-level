@@ -14,4 +14,6 @@ B1 = Kss.B;
 C1 = Kss.C;
 D1 = Kss.D;
 
+sim('.\model\CSTR_sim.slx')
+
 save('decentralized_data', "simdata");

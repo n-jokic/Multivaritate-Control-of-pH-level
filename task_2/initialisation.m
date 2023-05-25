@@ -57,9 +57,9 @@ A4 = 0*eye(2); B4 =  eye(2); C4 =  eye(2); D4 = eye(2);
 A5 = 0*eye(2); B5 =  eye(2); C5 =  eye(2); D5 =  eye(2);
 K_sel = 1; t_end = 100000; txa_r_up = 20000; txa_r_down = 30000;
 ty_r_up = 45000; ty_r_down = 55000; d1 = 1; d2 = 1; tFa_d_up = 65000;
-tFa_d_down = 70000; tFb_d_up = 75000; tFb_d_down = 80000;
+tFa_d_down = 75000; tFb_d_up = 85000; tFb_d_down = 95000;
 
 %%
 decentralized_simulation;
 %%
-
+decoupling_dc_simulation;
