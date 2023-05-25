@@ -77,7 +77,7 @@ save('decent_controler', 'K_decenent');
 %%
 %%
 figure(8);
-w = logspace(-6, 10, 5000);
+w = logspace(-6, 0, 5000);
 svG = sigma(tf(Gss), w);
 W = G_tf_norm*K_norm;
 svW = sigma(W, w);

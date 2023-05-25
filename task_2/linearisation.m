@@ -138,7 +138,7 @@ save('linear_model', 'Gss', 'Gzpk');
 
 %%
 Dy = [4.3e-8 0; 0 0.19]; %Vrednosit malih signala
-Du = [Fa0*1.2 - Fa0 0; 0 Fb0*1.2 - Fb0];
+Du = [Fa0*2 - Fa0 0; 0 Fb0*2 - Fb0];
 Dd = y0;
 
 G_s = Dy^-1*Gtf*Du;

@@ -13,13 +13,13 @@ G_tf_norm = Dy^-1*tf(minreal(Gss))*Du;
 
 M = 1.32;
 w0 = w1;
-S0 = 1e-3;
+S0 = 1e-5;
 s = tf('s');
 gs = (s + w0*S0)/(s/M + w0);
 
 Ws = gs^-1*eye(2);
 
-Ku = 1;
+Ku = 1.8;
 Wu = 1/Ku*eye(2);
 %% Kreiranje generelisanog O.U. P:
 G = G_tf_norm;
