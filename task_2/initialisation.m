@@ -16,7 +16,7 @@ end
 
 %%
 
-SAVE = 1; 
+SAVE = 0; 
 path = 'C:\Users\milos\OneDrive\VIII semestar\MSU\projekat\izvestaj\slike\zad2';
 
 kv = 0.01; % 1/s

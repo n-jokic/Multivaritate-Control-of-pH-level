@@ -85,7 +85,7 @@ disp(Mt_max_dekupW0);
 
 Ms_max_Hinf = max(gornja_svS4);
 Mt_max_Hinf = max(gornja_svT4);
-disp('Dekuplujuce upravljanje na w = 0: ');
+disp('Hinf upravljanje: ');
 disp('Maksimalna vrednost osetljivosti Ms : ');
 disp(Ms_max_Hinf);
 disp('Maksimalna vrednost komplementarne osetljivosti Mt : ');
@@ -93,7 +93,7 @@ disp(Mt_max_Hinf);
 
 Ms_max_Hinv = max(gornja_svS5);
 Mt_max_Hinv = max(gornja_svT5);
-disp('Dekuplujuce upravljanje na w = 0: ');
+disp('Potpuna inverzija: ');
 disp('Maksimalna vrednost osetljivosti Ms : ');
 disp(Ms_max_Hinv);
 disp('Maksimalna vrednost komplementarne osetljivosti Mt : ');

@@ -74,39 +74,49 @@ K_norm = C1^-1*K_star_norm;
 
 K_decenent = Du*K_norm*Dy^-1;
 save('decent_controler', 'K_decenent');
+
 %%
-%%
-figure(8);
+f = figure(8);
+f.Name = 'Sigma_G_W_decenent';
 w = logspace(-6, 0, 5000);
-svG = sigma(tf(Gss), w);
+svG = sigma(tf(G_tf_norm), w);
 W = G_tf_norm*K_norm;
 svW = sigma(W, w);
-plot(log10(w), 20*log10(svW), 'r');
-%legend('originalni', 'sa kontrolerom');
+semilogx(w,20*log10(svW(1,:)), 'r', w,20*log10(svG(1,:)), 'b'); hold on;
+semilogx(w,20*log10(svW(2,:)), 'r', w,20*log10(svG(2,:)), 'b'); hold off;
+xlabel('$\omega $ [rad/s]'); ylabel('$\sigma [dB]$');
+grid on;
+legend('$\sigma(W) $', '$\sigma(G) $');
+
+if(SAVE)
+    saveas(f,[path '\' f.Name '.eps'],'epsc');
+end
 
 T = W*(eye(2) + W)^-1;
 svT = sigma(T, w);
 S = eye(2) - T;
 svS = sigma(S, w);
 
-figure(9);
+f = figure(9);
 f.Name = 'sigma_K_decent_G_tf_norm';
-semilogx(w, 20*log10(svT), 'b');
-hold on;
-semilogx(w, 20*log10(svS), 'r');
-hold off;
+semilogx(w, 20*log10(svT(1,:)), 'b', w, 20*log10(svS(1,:)), 'r'); hold on;
+semilogx(w, 20*log10(svT(2,:)), 'b', w, 20*log10(svS(2,:)), 'r'); hold off;
+xlabel('$\omega $ [rad/s]'); ylabel('$\sigma [dB]$');
+grid on;
+legend('$\sigma(T) $', '$\sigma(S) $', 'Location', 'best');
+
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
-%%
+
 %%
 S = minreal((eye(2) + K_norm*G_tf_norm)^-1);
 T = eye(2) - S;
 f = figure(20);
 f.Name = 'step_T_decent';
 step(T, 10000, 'k');
-xlabel('$t$[s]');
-ylabel('$y(t)$ [a.u.]');
+xlabel('t');
+ylabel('y(t) '); grid on;
 hold off;
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
@@ -115,9 +125,9 @@ end
 f = figure(21);
 f.Name = 'step_KS_decent';
 step(K_norm*S*0.1, 10000, 'k');
-xlabel('$t$[s]');
-ylabel('$u(t)$ [a.u.]');
-hold off;
+xlabel('t');
+ylabel('u(t) ');
+hold off; grid on;
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
