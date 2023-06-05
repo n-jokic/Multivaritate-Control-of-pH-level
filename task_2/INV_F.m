@@ -19,7 +19,7 @@ G_22_star_norm = G_star_norm(2, 2);
 f = figure(1);
 f.Name = 'margin_G11_norm_inv';
 margin(G_11_star_norm );
-
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -28,7 +28,7 @@ end
 f = figure(2);
 f.Name = 'margin_G22_norm_inv';
 margin(G_22_star_norm );
-
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -45,7 +45,7 @@ K22_star_norm = w1/s;
 f = figure(3);
 f.Name = 'margin_KG11_norm_inv';
 margin(G_11_star_norm*K11_star_norm);
-
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -54,7 +54,7 @@ end
 f = figure(4);
 f.Name = 'margin_KG22_norm_inv';
 margin(G_22_star_norm*K22_star_norm);
-
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -79,7 +79,7 @@ semilogx(w,20*log10(svW(2,:)), 'r', w,20*log10(svG(2,:)), 'b'); hold off;
 xlabel('$\omega $ [rad/s]'); ylabel('$\sigma [dB]$');
 grid on;
 legend('$\sigma(W) $', '$\sigma(G) $');
-
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -96,7 +96,7 @@ semilogx(w, 20*log10(svT(2,:)), 'b', w, 20*log10(svS(2,:)), 'r'); hold off;
 xlabel('$\omega $ [rad/s]'); ylabel('$\sigma [dB]$');
 grid on;
 legend('$\sigma(T) $', '$\sigma(S) $', 'Location', 'best');
-
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -111,6 +111,7 @@ step(T, 10000, 'k');
 xlabel('t');
 ylabel('y(t)');
 hold off; grid on;
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -121,6 +122,7 @@ step(K_norm*S*0.1, 10000, 'k');
 xlabel('t');
 ylabel('u(t)');
 hold off; grid on;
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end

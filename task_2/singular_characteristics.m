@@ -6,6 +6,7 @@ load('decoupling_dc.mat')
 load('inv_f.mat')
 load('H_inf.mat')
 
+close all
 
 w = logspace(-5, 0, 5000);
 
@@ -27,7 +28,7 @@ semilogx(w, 20*log10(svT1(2,:)), 'r', w, 20*log10(svT2(2,:)), 'k', ...
 hold off;
 grid on; xlabel('$\omega $ [rad/s]'); ylabel('$\sigma(T(j\omega)) [dB]$'); 
 legend('Decentralizovano', 'Dekupler na $\omega = 0 $', 'Dekupler na $\omega = \omega_0$', 'H$\infty$', 'Potpuna inverzija', 'Location', 'best')
-
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -41,7 +42,7 @@ semilogx(w, 20*log10(svS1(2,:)), 'r', w, 20*log10(svS2(2,:)), 'k', ...
 hold off;
 grid on; xlabel('$\omega$ [rad/s]'); ylabel('$\sigma(S(j\omega))$ [dB]'); 
 legend('Decentralizovano', 'Dekupler na $\omega = 0 $', 'Dekupler na $\omega = \omega_0$', 'H$\infty$', 'Potpuna inverzija', 'Location', 'best')
-
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end

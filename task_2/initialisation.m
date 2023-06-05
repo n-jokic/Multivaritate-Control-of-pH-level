@@ -56,10 +56,10 @@ A3 =0*eye(2); B3 =  eye(2); C3 =  eye(2); D3 =  eye(2);
 A4 = 0*eye(2); B4 =  eye(2); C4 =  eye(2); D4 = eye(2);
 A5 = 0*eye(2); B5 =  eye(2); C5 =  eye(2); D5 =  eye(2);
 k = 0;
-K_sel = 1; t_end = 125000+k; txa_r_up = 20000+k; txa_r_down = 30000+k;
+K_sel = 1; t_end = 135000+k; txa_r_up = 20000+k; txa_r_down = 30000+k;
 ty_r_up = 45000+k; ty_r_down = 55000+k; d1 = 1; d2 = 1; tFa_d_up = 65000+k;
-tFa_d_down = 75000+k; tFb_d_up = 85000+k; tFb_d_down = 95000+k;
-tdir = 105000;
+tFa_d_down = 75000+k; tFb_d_up = 95000+k; tFb_d_down = 105000+k;
+tdir = 125000;
 
 %%
 decentralized_simulation;

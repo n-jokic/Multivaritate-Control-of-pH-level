@@ -11,9 +11,9 @@ G_tf_norm = Dy^-1*tf(minreal(Gss))*Du;
 
 %%
 
-M = 1.32;
-w0 = w1;
-S0 = 1e-5;
+M = 1.05;
+w0 = w1*1.2;
+S0 = 1e-4;
 s = tf('s');
 gs = (s + w0*S0)/(s/M + w0);
 
@@ -43,7 +43,7 @@ S = minreal((eye(2) + K*G)^-1);
 T = minreal(eye(2) - S);
 
 f = figure(1);
-f.Name ='WS/WKS';
+f.Name ='WS_WKS';
     subplot(2, 1, 1);
     
 
@@ -58,7 +58,7 @@ f.Name ='WS/WKS';
         xlabel('$\omega$ [rad/s]');
         ylabel('$\|W_uKS\|$');
         title('Ponderisano upravljanje');
-
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -75,6 +75,7 @@ f.Name = 'sigma_KG_inf';
         xlabel('$\omega$ [rad/s]');
         ylabel('$T, S$');
         title('Singularne vrednosti');
+        set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -93,6 +94,7 @@ step(T, 10000, 'k');
 xlabel('$t$[s]');
 ylabel('$y(t)$ [a.u.]');
 hold off;
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
@@ -103,6 +105,7 @@ step(K_norm*S*0.1, 10000, 'k');
 xlabel('$t$[s]');
 ylabel('$u(t)$ [a.u.]');
 hold off;
+set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
