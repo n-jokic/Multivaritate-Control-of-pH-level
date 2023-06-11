@@ -117,18 +117,26 @@ S = minreal((eye(2) + K_norm*G_tf_norm)^-1);
 T = eye(2) - S;
 f = figure(25);
 f.Name = 'step_T_decoupling_w0';
-step(T, 10000, 'k');
+h = stepplot(T, 10000, 'k');
+p = getoptions(h);
+p.TimeUnits = 'hours';
+
+setoptions(h, p);
 xlabel('t');
-ylabel('y(t)');
-hold off; grid on;
+ylabel('y(t)'); grid on;
+hold off;
 set(gcf, 'Renderer', 'Painters');
 if(SAVE)
     saveas(f,[path '\' f.Name '.eps'],'epsc');
 end
 
-f = figure(26);
+f = figure(21);
 f.Name = 'step_KS_decoupling_w0';
-step(K_norm*S*0.1, 10000, 'k');
+h = stepplot(K_norm*S*0.1, 10000, 'k');
+p = getoptions(h);
+p.TimeUnits = 'hours';
+
+setoptions(h, p);
 xlabel('t');
 ylabel('u(t)');
 hold off; grid on;

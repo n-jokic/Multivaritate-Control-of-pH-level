@@ -9,7 +9,7 @@ newcolors = {'#2F7604','#FDB750','#1E73BE','#E80000',  '#010100'};
 
 t = simdata.Time;
 
-widths = [3.4 ,2.6, 1.8, 1, 0.2];
+widths = [3 ,2.6, 1.8, 1, 0.6];
 
 %outputs
 xa = simdata.Data(:, 1);

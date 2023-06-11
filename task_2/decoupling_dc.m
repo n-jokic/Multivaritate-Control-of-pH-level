@@ -116,7 +116,11 @@ S = minreal((eye(2) + K_norm*G_tf_norm)^-1);
 T = eye(2) - S;
 f = figure(20);
 f.Name = 'step_T_decoupling_dc';
-step(T, 10000, 'k');
+h = stepplot(T, 10000, 'k');
+p = getoptions(h);
+p.TimeUnits = 'hours';
+
+setoptions(h, p);
 xlabel('t');
 ylabel('y(t)'); grid on;
 hold off;
@@ -127,7 +131,11 @@ end
 
 f = figure(21);
 f.Name = 'step_KS_decoupling_dc';
-step(K_norm*S*0.1, 10000, 'k');
+h = stepplot(K_norm*S*0.1, 10000, 'k');
+p = getoptions(h);
+p.TimeUnits = 'hours';
+
+setoptions(h, p);
 xlabel('t');
 ylabel('u(t)');
 hold off; grid on;
